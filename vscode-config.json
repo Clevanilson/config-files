@@ -3,7 +3,7 @@
     "workbench.sideBar.location": "right",
     "editor.fontSize": 18,
     "editor.tabSize": 2,
-    "editor.fontFamily": "'BitstreamVeraSans Nerd Font', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'BitstreamVeraSansMono Nerd Font', Consolas, 'Courier New', monospace",
     "editor.wordWrap": "on",
     "vim.easymotion": true,
     "vim.incsearch": true,
