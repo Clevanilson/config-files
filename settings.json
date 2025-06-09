@@ -1,4 +1,10 @@
 {
   "editor.lineNumbers": "relative",
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false
 }
