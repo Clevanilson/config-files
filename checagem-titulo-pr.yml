@@ -1,0 +1,23 @@
+name: Checar formato do título do PR
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checar formato do título do PR
+        run: |
+          title="${{ github.event.pull_request.title }}"
+          echo "Checando título: '$title'"
+
+          if echo "$title" | grep -qE '^\[(feat|fix|refactor|build|ci|test)\]:'; then
+            echo "✅ Título válido"
+            exit 0
+          else
+            echo "❌ Título inválido. precisar iniciar com [feat|fix|refactor|build|ci|test]"
+            exit 1
+          fi
