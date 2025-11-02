@@ -1,0 +1,48 @@
+name: PR Version Bump
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Obter o título do PR
+        id: title
+        run: echo "title=${{ github.event.pull_request.title }}" >> $GITHUB_OUTPUT
+
+      - name: Determinar o tipo de bump
+        id: bump
+        run: |
+          title="${{ steps.title.outputs.title }}"
+          if echo "$title" | grep -qE '^\[feat\]:'; then
+            echo "type=minor" >> $GITHUB_OUTPUT
+          elif echo "$title" | grep -qE '^\[(fix|refactor)\]:'; then
+            echo "type=patch" >> $GITHUB_OUTPUT
+          else
+            echo "type=none" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Bump version
+        if: steps.bump.outputs.type != 'none'
+        run: |
+          npm version ${{ steps.bump.outputs.type }} --no-git-tag-version
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "chore: bump version (${{ steps.bump.outputs.type }})"
+          git push origin HEAD:${{ github.head_ref }}
