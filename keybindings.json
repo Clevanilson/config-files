@@ -6,5 +6,9 @@
   {
     "key": "ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "toggleVim"
   }
 ]
