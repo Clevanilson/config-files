@@ -10,5 +10,9 @@
   {
     "key": "ctrl+alt+v",
     "command": "toggleVim"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "workbench.action.terminal.toggleTerminal"
   }
 ]
