@@ -6,5 +6,6 @@
   "chat.commandCenter.enabled": false,
   "window.menuBarVisibility": "compact",
   "workbench.activityBar.location": "hidden",
-  "workbench.layoutControl.enabled": false
+  "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right"
 }
