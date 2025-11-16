@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable ACPI wake device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/disable-wakeup.sh
+
+[Install]
+WantedBy=multi-user.target
