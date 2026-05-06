@@ -27,3 +27,5 @@ mkdir develop
 ssh-keygen -t ed25519 -C "clevanilson.contato@gmail.com"
 
 yay -S vscodium-bin
+
+sudo pacman -S linux618-nvidia-open
