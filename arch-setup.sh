@@ -23,3 +23,5 @@ yay -S brave-bin --noconfirm
 echo "Creating develop dir"
 
 mkdir develop
+
+ssh-keygen -t ed25519 -C "clevanilson.contato@gmail.com"
