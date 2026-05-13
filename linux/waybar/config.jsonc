@@ -1,0 +1,78 @@
+// -*- mode: jsonc -*-
+{
+    // --- Waybar Configuration ---
+    "layer": "top",
+    "height": 30,
+    "spacing": 4,
+
+    // --- Modules Layout ---
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "tray",
+        "custom/power"
+    ],
+
+    // --- Module Configurations ---
+
+    // Workspaces
+    "hyprland/workspaces": {
+        "format": "{}",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    // System Tray
+    "tray": {
+        "spacing": 10
+    },
+
+    // Clock and Calendar
+    "clock": {
+        "format": "{:%H:%M - %d / %m / %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "zenity --calendar"
+    },
+
+    // Network Status
+    "network": {
+        "format-wifi": "<span color='#7dcfff'></span>    {essid} ({signalStrength}%) ",
+        "format-ethernet": "<span color='#bb9af7'></span> {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+
+    // Audio Controls
+    "pulseaudio": {
+        "format": "<span color='#bb9af7'>{icon}</span>    {volume}%",
+        "format-bluetooth": "<span color='#bb9af7'>{icon}</span> {volume}%",
+        "format-bluetooth-muted": "<span color='#bb9af7'></span> {volume}%",
+        "format-muted": "<span color='#bb9af7'></span> {volume}%",
+        "format-source": "{volume}% <span color='#bb9af7'></span>",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Power Menu
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "nwg-bar"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  // --- VS Code Editor Settings ---
+
+  // Cursor and Appearance
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+
+  // Sidebar and Explorer
+  "explorer.compactFolders": false,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+
+  // UI Components
+  "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false
+}

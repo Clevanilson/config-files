@@ -1,16 +1,25 @@
 [
+  // --- VS Code Keybindings ---
+
+  // Quick Open / File Search
   {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpen"
   },
+
+  // Toggle Sidebar
   {
     "key": "ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
+
+  // Toggle Vim Mode (if extension is installed)
   {
     "key": "ctrl+alt+v",
     "command": "toggleVim"
   },
+
+  // Toggle Integrated Terminal
   {
     "key": "ctrl+'",
     "command": "workbench.action.terminal.toggleTerminal"
