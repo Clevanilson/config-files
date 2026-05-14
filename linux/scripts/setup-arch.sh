@@ -105,6 +105,8 @@ setup_zsh() {
     if [[ "$SHELL" != "/bin/zsh" ]]; then
         log "Changing default shell to zsh..."
         chsh -s /bin/zsh
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+        echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
     else
         log "ZSH is already the default shell."
     fi
