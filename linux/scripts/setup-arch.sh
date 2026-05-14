@@ -40,6 +40,7 @@ PACMAN_PACKAGES=(
     slurp
     waybar
     pavucontrol
+    wget
     steam
 )
 
