@@ -18,6 +18,7 @@ window#waybar {
     border-radius: 20px;
     transition-property: background-color;
     transition-duration: .5s;
+    border: none;
 }
 
 window#waybar.hidden {
