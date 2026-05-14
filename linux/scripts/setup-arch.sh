@@ -39,6 +39,7 @@ PACMAN_PACKAGES=(
     grim
     slurp
     waybar
+    pavucontrol
     steam
 )
 
