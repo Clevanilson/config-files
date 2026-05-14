@@ -117,9 +117,8 @@ setup_zsh() {
 # Optional: Generate SSH key
 # This is commented out by default as it requires user interaction/specific details.
 generate_ssh_key() {
-    # log "Generating SSH key..."
-    # ssh-keygen -t ed25519 -C "clevanilson.contato@gmail.com"
-    :
+    log "Generating SSH key..."
+    ssh-keygen -t ed25519 -C "clevanilson.contato@gmail.com"
 }
 
 # --- Main Execution ---
@@ -132,6 +131,7 @@ main() {
     install_aur_packages
     configure_services
     setup_zsh
+    generate_ssh_key
     
     log "Setup complete! Please reboot your system to apply all changes."
 }
