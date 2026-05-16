@@ -38,6 +38,7 @@ PACMAN_PACKAGES=(
     man-db
     grim
     slurp
+    wl-clipboard
     waybar
     pavucontrol
     wget
