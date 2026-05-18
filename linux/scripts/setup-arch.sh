@@ -42,6 +42,7 @@ PACMAN_PACKAGES=(
     waybar
     pavucontrol
     wget
+    flatpak
     steam
 )
 
